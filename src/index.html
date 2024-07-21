@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Conjunto de ferramentas para desenvolvedores</title>
+        <link rel="stylesheet" type="text/css" href="./style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+        <script src="../fontawesome/fontawesome.js"></script>
+        <!-- Componentes -->
+        <script defer src="./services/format-sevice.js"></script>
+        <script defer src="./services/decode-service.js"></script>
+        <!-- Config -->
+        <script defer src="./config/dependencies.js"></script>
+        <script defer src="./config/prototypes.js"></script>
+        <!-- Pages -->
+        <script defer src="./pages/home.page.js"></script>
+        <!-- Storage -->
+        <script defer src="./storage/storage.js"></script>
+        <!-- Utils -->
+        <script defer src="./utils/constants.js"></script>
+        <script defer src="./utils/events.js"></script>
+        <script defer src="./utils/validator.js"></script>
+        <script defer src="./main.js"></script>
+    </head>
+    <body>
+        <header class="header-container">
+            <h1 class="header-title">JSON</h1>
+        </header>
+        <section class="container-page">
+            <div class="page">
+                <div class="container-btns">
+                    <select class="select-type-tools">
+                        <option value="formatarjson">Formatar JSON</option>
+                        <option value="utf8">Decodificar UTF-8</option>
+                    </select>
+                </div>
+                <div class="container-inputs">
+                    <div class="container-text-area-entrada">
+                        <div class="container-label-text-area">
+                            <label class="label-text-area-entrada">Entrada</label>
+                            <i title="Colar texto para area de entrada" id="icon-paste-text-area" class="fa-solid fa-clipboard"></i>
+                        </div>
+                        <textarea class="text-area-input-entrada"></textarea>
+                    </div>
+                    <div class="container-text-area-saida">
+                        <div class="container-label-text-area">
+                            <label class="label-text-area-saida">Saida</label>
+                            <i title="Copiar texto" id="icon-copy-text-area" class="fa-regular fa-copy icon-copy active"></i>
+                            <i title="Texto copiado" id="icon-copied-text-area" class="fa-solid fa-check icon-copy "></i>
+                        </div>
+                        <textarea class="text-area-input-saida"></textarea>
+                    </div>
+                </div>
+                <div class="container-btn-submit">
+                    <div class="btn-submit">Formatar</div>
+                    <small class="label-btn-submit"></small>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>
