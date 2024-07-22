@@ -10,9 +10,10 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
         <script src="../fontawesome/fontawesome.js"></script>
-        <!-- Componentes -->
+        <!-- Services -->
         <script defer src="./services/format-sevice.js"></script>
         <script defer src="./services/decode-service.js"></script>
+        <script defer src="./services/convert-service.js"></script>
         <!-- Config -->
         <script defer src="./config/dependencies.js"></script>
         <script defer src="./config/prototypes.js"></script>
@@ -28,7 +29,7 @@
     </head>
     <body>
         <header class="header-container">
-            <h1 class="header-title">JSON</h1>
+            <h1 class="header-title">DEVELOPER TOOL SET</h1>
         </header>
         <section class="container-page">
             <div class="page">
@@ -36,7 +37,9 @@
                     <select class="select-type-tools">
                         <option value="formatarjson">Formatar JSON</option>
                         <option value="utf8">Decodificar UTF-8</option>
+                        <option value="sigla">Sigla estado</option>
                     </select>
+                    <h3 class="select-description"> Formatar um texto JSON</h3>
                 </div>
                 <div class="container-inputs">
                     <div class="container-text-area-entrada">

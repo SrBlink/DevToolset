@@ -13,7 +13,8 @@
     --secondary-color-font-code: #eb6fbb;
     --third-color-font-code: #bd95fe;
     --third-color-font-code-opacity: #bd95fe55;
-    --fourth-third-color-font-code: #6475aa;
+    --fourth-color-font-code: #6475aa;
+    --fifth-color-font-code: #ffff80;
     --background-color-code: #282a36;
     --background-secondary-color-code: #0e1419;
 }
@@ -51,7 +52,6 @@ option {
 }
 
 
-.header-title {}
 
 .page {
     display: flex;
@@ -78,7 +78,9 @@ option {
 
 .container-btns {
     display: flex;
-    gap: 10px;
+    justify-content: start;
+    align-items: center;
+    gap: 30px;
 }
 
 .select-type-tools {
@@ -93,6 +95,11 @@ option {
 
 .select-type-tools:hover {
     background-color: var(--primary-color-font-code-opacity);
+}
+
+.select-description{
+    font-size: 15px;
+    color: var(--fifth-color-font-code);
 }
 
 .btn-submit {
@@ -144,7 +151,7 @@ option {
     min-height: 390px;
     outline: none;
     background-color: var(--background-color-code);
-    border: 1px solid var(--fourth-third-color-font-code);
+    border: 1px solid var(--fourth-color-font-code);
     color: #fff;
     padding: 10px;
 }
