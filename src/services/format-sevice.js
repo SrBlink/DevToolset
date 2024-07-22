@@ -1,6 +1,5 @@
 function Format() {
 
-
     function json(data) {
         if (!data) return;
 
