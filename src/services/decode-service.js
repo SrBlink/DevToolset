@@ -1,8 +1,5 @@
 function Decode() {
 
-
-
-
     function utf8(data) {
         
         if(!data) return;
