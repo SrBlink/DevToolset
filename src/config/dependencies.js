@@ -17,6 +17,7 @@ function StartUp() {
         _page = Page();
         _service.format = Format();
         _service.decode = Decode();
+        _service.convert = Convert();
 
 
     }

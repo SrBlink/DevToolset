@@ -27,24 +27,34 @@ function Page() {
         },
         iconCopied: {
             element: doc.q('#icon-copied-text-area'),
+        },
+        selectDescription: {
+            element: doc.q('.select-description'),
+            clear: () => { doc.q('.select-description').innerText = '' }
         }
     };
 
     const actionSelect = {
         "formatarjson": {
             text: 'Formatar',
-            execute: (data) => _service.format.json(data)
+            execute: (data) => _service.format.json(data),
+            description: 'Formatar um json sem indentação.'
         },
         "utf8": {
             text: 'Decodificar',
-            execute: (data) => _service.decode.utf8(data)
+            execute: (data) => _service.decode.utf8(data),
+            description: 'Tratar um texto com caracteres especiais UTF-8.'
         },
+        "sigla": {
+            text: 'Converter',
+            execute: (data) => _service.convert.state(data),
+            description: 'Converte a sigla de um estado para o nome completo do estado.'
+        }
 
     }
 
     function on() {
         onEvent();
-        addListeners();
     }
 
     function onEvent() {
@@ -62,6 +72,7 @@ function Page() {
     function handleTextButtonSubmit(event) {
         const selectValue = event.target.value;
         selectors.buttonSubmit.element.innerText = actionSelect[selectValue].text;
+        selectors.selectDescription.element.innerText = actionSelect[selectValue].description;
     }
 
     function handleButtonSubmit(event) {
@@ -117,8 +128,5 @@ function Page() {
         setTimeout(() => { toggleCopiedButton(false) }, 1000)
 
     }
-
-    function addListeners() { }
-
     return { on }
 }
