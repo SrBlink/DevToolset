@@ -80,7 +80,7 @@ option {
     display: flex;
     justify-content: start;
     align-items: center;
-    gap: 30px;
+    gap: 15px;
 }
 
 .select-type-tools {
@@ -98,7 +98,7 @@ option {
 }
 
 .select-description{
-    font-size: 15px;
+    font-size: 13px;
     color: var(--fifth-color-font-code);
 }
 
